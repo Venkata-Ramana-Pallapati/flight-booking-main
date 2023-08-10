@@ -1,0 +1,58 @@
+.container-fluid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: auto;
+    
+   
+}
+input:hover{
+    background-color: rgb(215, 229, 224);
+}
+.registration-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    width: 90%;
+}
+@media screen and (max-width:768px) {
+    .registration-container{
+        width: 100%;
+    }
+}
+
+
+.card{
+    padding: 40px;
+    width: 32%;
+    border: black;
+ 
+}
+@media screen and (max-width:768px) {
+    .card{
+        width: 100%;
+    }
+}
+h2{
+    text-shadow: 2px 2px 4px rgb(290,0,0,0.4);
+    font-style: italic;
+}
+
+
+.heading{
+    font-family: "Bree Serif";
+    font-size: 26px;
+}
+
+.image{
+    height: 80vh;
+    width: 60%;
+}
+@media screen and (max-width:768px) {
+    .image{
+        display: none;
+    }
+}

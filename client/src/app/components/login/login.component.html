@@ -1,0 +1,43 @@
+<div class="container">
+   
+    <!-- <img src="https://149842033.v2.pressablecdn.com/wp-content/uploads/2019/11/Colorlib-Reg-Form-v7.jpg" alt="" class="image" />   -->
+     <img  class="abc" src="https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration_335657-2242.jpg">   
+     <!-- <div class="login-container">  -->
+        <!-- <img src="https://i.imgur.com/rheHBiu.jpg">  -->
+        <!-- <img src="https://assets.justinmind.com/wp-content/uploads/2018/10/inspiration-login-forms-list-768x492.png" alt="" class="image" />  -->
+          <div class="card">  
+            
+    
+            <form [formGroup]="regForm"  #r="ngForm" (ngSubmit)="onSubmit(r.value)" class="form">
+                <h2 align="center"class="heading text-center">L o g i n</h2>
+
+                <div class="form-group mb-2">
+
+                    <label for="email">Email</label>
+
+                    <input placeholder="Enter email" type="text" class="form-control" id="email" formControlName="email" required>
+
+                    <div *ngIf="regForm.controls['email'].touched && regForm.controls['email']?.['errors']">
+                        <div *ngIf="regForm.controls['email']?.['errors']?.['required']" class="error-message text-danger">
+                            Email is required
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="password">Password</label>
+                    <input placeholder="Enter password" type="text" class="form-control" id="password" formControlName="password" required>
+                    <div *ngIf="regForm.controls['password'].touched && regForm.controls['password']?.['errors']">
+                        <div *ngIf="regForm.controls['password']?.['errors']?.['required']"
+                            class="error-message text-danger">
+                            Password is required
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-4 w-100" [disabled]="regForm.invalid">Sign In</button>
+                <div class="mt-2"><a routerLink="/register" class="mt-2">Don't have an account? click here</a></div>
+                <a routerLink="/airline-login" class="mt-4">Airline? click here.</a>
+            </form>
+         </div>  
+    
+     <!-- </div>  -->
+</div>
